@@ -22,12 +22,12 @@ if __name__ == "__main__":
 
     apps = falcon.API()
 
-    app.add_route("/get-distance/", GetData())
-    app.add_route("/post-distance/", PostData())
-    app.add_sink(static)
+    apps.add_route("/get-distance/", GetData())
+    apps.add_route("/post-distance/", PostData())
+    apps.add_sink(static)
 
     host = WEBSITE_BASE_URL
     port = WEBSITE_BASE_PORT
-    httpd = simple_server.make_server(host, port, app)
+    httpd = simple_server.make_server(host, port, apps)
     print("Serving on %s:%s" % (host, port))
     httpd.serve_forever()
