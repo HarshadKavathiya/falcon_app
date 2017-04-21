@@ -2,7 +2,7 @@ import os
 import mimetypes
 from wsgiref import simple_server
 from controller import *
-WEBSITE_BASE_URL = 'localhost'
+WEBSITE_BASE_URL = '127.0.0.1'
 WEBSITE_BASE_PORT = 80
 # from project.component import *
 import falcon
